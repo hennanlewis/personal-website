@@ -1,0 +1,7 @@
+.main {
+	@apply flex flex-col items-center max-w-[90vw] w-[60rem] m-auto my-4 p-4;
+}
+
+.main section {
+	@apply flex flex-col items-center w-full;
+}

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--color-primary: #ea0a40;
+		--color-text-base: #ededed;
+		--color-text-muted: #64686c;
+		--color-background-base: #222024;
+		--color-background-muted: #101214;
+	}
+
+	.light-mode {
+		--color-primary: #ea0a40;
+		--color-text-base: #000;
+		--color-text-muted: #1e2429;
+		--color-background-base: #64686c;
+		--color-background-muted: #ededed;
+	}
+
+	* {
+		font-family: Calibri;
+		box-sizing: content-box;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+		min-height: 100vh;
+		color: var(--color-text-base);
+		background: var(--color-background-base);
+	}
+}

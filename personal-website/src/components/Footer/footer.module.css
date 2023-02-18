@@ -1,0 +1,19 @@
+.footerInfo {
+	@apply mt-auto bg-skin-suport;
+}
+
+.footerInfo footer {
+	@apply flex flex-wrap gap-40 max-w-[90vw] w-[60rem] m-auto p-10;
+}
+
+.social {
+	@apply self-end;
+}
+
+.social ul {
+	@apply flex items-baseline gap-3 text-lg;
+}
+
+.social ul li a span {
+	@apply hidden;
+}

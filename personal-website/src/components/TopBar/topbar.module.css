@@ -1,0 +1,11 @@
+.navBar {
+	@apply flex justify-center border-t-4 border-primary bg-skin-suport;
+}
+
+.menu {
+	@apply flex justify-end items-center gap-4 max-w-[90vw] w-[60rem] px-4 py-3 uppercase text-sm font-semibold;
+}
+
+.menu li {
+	@apply flex justify-end items-center px-4 py-1 text-skin-base rounded border-b-4 border-transparent hover:bg-skin-suport hover:border-primary duration-200;
+}
