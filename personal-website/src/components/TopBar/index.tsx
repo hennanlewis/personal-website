@@ -8,10 +8,10 @@ export const TopBar = () => {
 		<nav className={styles.navBar}>
 			<ul className={styles.menu}>
 				<li>
-					<Link href="/">Projetos</Link>
+					<Link href="#projects">Projetos</Link>
 				</li>
 				<li>
-					<Link href="/">Tecnologias</Link>
+					<Link href="#tech">Tecnologias</Link>
 				</li>
 			</ul>
 		</nav>

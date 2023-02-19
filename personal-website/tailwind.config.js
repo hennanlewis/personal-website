@@ -23,7 +23,8 @@ module.exports = {
 			backgroundColor: {
 				skin: {
 					base: "var(--color-background-base)",
-					suport: "var(--color-background-muted)"
+					muted: "var(--color-background-muted)",
+					support: "var(--color-background-support)"
 				}
 			}
 		},
