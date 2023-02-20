@@ -69,3 +69,9 @@ interface PinnedRepository {
 	repositoryTopics: string[]
 	imageName: string[]
 }
+
+interface ContactProps {
+	subject: string
+	email: string
+	message: string
+}

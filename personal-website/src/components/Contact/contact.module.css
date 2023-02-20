@@ -1,0 +1,29 @@
+.contactTitle h1 {
+	@apply px-6 py-2 my-4 font-bold text-4xl bg-skin-support shadow-md shadow-black rounded-xl;
+}
+
+.contactTitle form,
+.contactTitle form label {
+	@apply flex flex-col w-[30rem] m-auto;
+}
+
+.contactTitle form {
+	@apply gap-4;
+}
+
+.contactTitle form textarea,
+.contactTitle form input {
+	@apply resize-none px-2 py-1 text-black rounded;
+}
+
+.contactTitle form button {
+	@apply flex justify-center px-2 py-1 font-extrabold text-lg bg-primary hover:brightness-125 hover:shadow hover:scale-105 border border-white/20 rounded duration-200;
+}
+
+.messageSuccess {
+	@apply text-emerald-700 text-xl text-center font-bold;
+}
+
+.messageError {
+	@apply text-primary text-xl text-center font-bold;
+}

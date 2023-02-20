@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact"
 import RepositorieCard from "@/components/RepositoryCard"
 import style from "./page.module.css"
 
@@ -72,7 +73,10 @@ export default async function Home() {
 				Aliquam dignissimos ea aliquid, sit fugiat eos quisquam vel.
 				Ratione temporibus quaerat doloribus recusandae!
 			</p>
-			<RepositorieCard pinnedRepositories={pinnedRepositories} />
+			{pinnedRepositories && pinnedRepositories.length > 0 && (
+				<RepositorieCard pinnedRepositories={pinnedRepositories} />
+			)}
+			<Contact />
 		</main>
 	)
 }
