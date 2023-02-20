@@ -1,4 +1,5 @@
 "use client"
+import { promiseErrorHandler } from "@/utils/promiseErrorHandler"
 import { ChangeEvent, FormEvent, useEffect, useState } from "react"
 
 import style from "./contact.module.css"
@@ -17,17 +18,19 @@ export default function Contact() {
 	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
 
-		const response = await fetch("http://localhost:3000/api/contact", {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({ ...contactMessage }),
-		})
+		const url = `${process.env.ENVIRONMENT}/api/contact`
+		const [response, error] = await promiseErrorHandler(
+			fetch(url, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ ...contactMessage }),
+			})
+		)
 
-		if (response.ok) {
-			setContactMessage(initialContactValues)
-		}
+		if (response?.status == 200) setContactMessage(initialContactValues)
+		if (error) console.log("Houve um erro: ", error)
 
-		const data = await response.json()
+		const data = await response?.json()
 		setResponseMsg(data.msg)
 	}
 
@@ -41,10 +44,10 @@ export default function Contact() {
 	}
 
 	useEffect(() => {
+		let timerID: NodeJS.Timeout
 		if (responseMsg != "")
-			setTimeout(() => {
-				setResponseMsg("")
-			}, 5000)
+			timerID = setTimeout(() => setResponseMsg(""), 5000)
+		return () => clearTimeout(timerID)
 	}, [responseMsg])
 
 	return (
@@ -62,6 +65,7 @@ export default function Contact() {
 						onChange={(event) => handleChangeValues(event)}
 					/>
 				</label>
+
 				<label>
 					<span>E-mail:</span>
 					<input
@@ -72,25 +76,30 @@ export default function Contact() {
 						onChange={(event) => handleChangeValues(event)}
 					/>
 				</label>
+
 				<label>
 					<span>Mensagem</span>
 					<textarea
 						name="message"
 						rows={5}
-						maxLength={301}
+						maxLength={400}
 						required
 						value={contactMessage.message}
 						onChange={(event) =>
 							handleChangeValues(event)
 						}></textarea>
 				</label>
+
 				<button type="submit">Enviar mensagem</button>
-				{responseMsg.match("sucesso") && (
-					<span className={style.messageSuccess}>{responseMsg}</span>
-				)}
-				{!responseMsg.match("sucesso") && (
-					<span className={style.messageError}>{responseMsg}</span>
-				)}
+
+				<span
+					className={
+						responseMsg.match("sucesso")
+							? style.messageSuccess
+							: style.messageError
+					}>
+					{responseMsg}
+				</span>
 			</form>
 		</section>
 	)

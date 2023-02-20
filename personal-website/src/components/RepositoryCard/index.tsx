@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Techs } from "../Techs"
+import { TechIcons } from "../TechIcons"
 
 import style from "./repositorycard.module.css"
 
@@ -14,16 +14,17 @@ export default function RepositorieCard({
 		<section id="projects">
 			<h1 className={style.projectsTitle}>Projetos</h1>
 			<div className={style.repositorySection}>
-				{pinnedRepositories.map((repositorie) => (
+				{pinnedRepositories?.map((repositorie) => (
 					<div key={repositorie.id} className={style.repositoryCard}>
 						<div className={style.imageFrame}>
-							{repositorie.imageName.map((image) => (
-								<img
-									key={`${repositorie.name}-${image}`}
-									src={`https://raw.githubusercontent.com/hennanlewis/${repositorie.name}/main/doc/${image}`}
-									alt={repositorie.name}
-								/>
-							))}
+							{repositorie.imageName.length > 0 &&
+								repositorie.imageName.map((image) => (
+									<img
+										key={`${repositorie.name}-${image}`}
+										src={`https://raw.githubusercontent.com/hennanlewis/${repositorie.name}/main/doc/${image}`}
+										alt={repositorie.name}
+									/>
+								))}
 						</div>
 						<h2 className={style.title}>
 							{repositorie.name.replaceAll("-", " ")}
@@ -34,7 +35,7 @@ export default function RepositorieCard({
 							<span>
 								{repositorie.repositoryTopics.map((topic) => (
 									<h3 key={topic} title={topic}>
-										{<Techs technology={topic} />}
+										{<TechIcons technology={topic} />}
 										<span aria-hidden="true">{topic}</span>
 									</h3>
 								))}

@@ -15,11 +15,11 @@ interface ObjectIcon {
 	[key: string]: JSX.Element
 }
 
-interface TechsProps {
+interface TechIconsProps {
 	technology: string
 }
 
-export const Techs = ({ technology }: TechsProps) => {
+export const TechIcons = ({ technology }: TechIconsProps) => {
 	const options: ObjectIcon = {
 		css3: (
 			<Link href="https://www.w3.org/Style/CSS/">
