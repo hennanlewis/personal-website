@@ -3,7 +3,7 @@
 }
 
 .repositorySection {
-	@apply grid grid-cols-3;
+	@apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3;
 }
 
 .repositoryCard {
@@ -39,7 +39,7 @@
 }
 
 .projectLinks a {
-	@apply flex justify-center px-2 py-1 font-extrabold bg-skin-support hover:brightness-125 hover:shadow hover:scale-105 border border-white/20 rounded duration-200;
+	@apply flex justify-center px-2 py-1 font-extrabold text-center bg-skin-support hover:brightness-125 hover:shadow hover:scale-105 border border-white/20 rounded duration-200;
 }
 
 .projectLinks a:nth-child(2) {

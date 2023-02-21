@@ -1,6 +1,11 @@
 export const promiseErrorHandler = <T>(
-	inputPromise: Promise<T>
+	inputPromise: Promise<T>,
+	finallyFunction?: unknown
 ): Promise<(T | null)[] | [null, Error]> =>
 	inputPromise
 		.then((response) => [response, null])
-		.catch((error: Error) => [null, error])
+		.catch((error) => {
+			console.log(error)
+			return [null, error]
+		})
+		.finally(() => finallyFunction)

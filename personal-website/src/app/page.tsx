@@ -5,13 +5,13 @@ import { promiseErrorHandler } from "../utils/promiseErrorHandler"
 import style from "./page.module.css"
 
 async function getData() {
-	const url = `${process.env.ENVIRONMENT}/api/graphql`
+	const url = `${process.env.VERCEL_URL}/api/graphql`
 	const [response, error] = await promiseErrorHandler(
 		fetch(url, {
 			next: { revalidate: 10 },
 		})
 	)
-	if (!response) return console.log(error)
+	if (!response) return []
 	return await response.json()
 }
 

@@ -11,6 +11,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			screens: {
+				sm: "480px"
+			},
 			colors: {
 				primary: "var(--color-primary)"
 			},

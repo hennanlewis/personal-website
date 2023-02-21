@@ -1,37 +1,51 @@
 "use client"
 import { promiseErrorHandler } from "@/utils/promiseErrorHandler"
 import { ChangeEvent, FormEvent, useEffect, useState } from "react"
+import { RiLoader4Fill } from "react-icons/ri"
 
 import style from "./contact.module.css"
 
-const initialContactValues = {
+const initialContactValues: ContactProps = {
 	email: "",
 	message: "",
 	subject: "",
 }
 
 export default function Contact() {
-	const [contactMessage, setContactMessage] =
-		useState<ContactProps>(initialContactValues)
+	const [contactMessage, setContactMessage] = useState(initialContactValues)
 	const [responseMsg, setResponseMsg] = useState("")
+	const [isErrorMessage, setIsErrorMessage] = useState(false)
+	const [isFetching, setIsFetching] = useState(false)
+
+	const controller = new AbortController()
 
 	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+		setIsFetching(true)
 		event.preventDefault()
 
-		const url = `${process.env.ENVIRONMENT}/api/contact`
+		const url = "/api/contact"
 		const [response, error] = await promiseErrorHandler(
 			fetch(url, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({ ...contactMessage }),
+				signal: controller.signal,
 			})
 		)
 
-		if (response?.status == 200) setContactMessage(initialContactValues)
-		if (error) console.log("Houve um erro: ", error)
+		if (response?.status == 200) {
+			setContactMessage(initialContactValues)
+			const data = await response?.json()
+			setResponseMsg(data.msg)
+			setIsErrorMessage(false)
+			setIsFetching(false)
+			return
+		}
 
 		const data = await response?.json()
 		setResponseMsg(data.msg)
+		setIsErrorMessage(true)
+		setIsFetching(false)
 	}
 
 	const handleChangeValues = (
@@ -43,6 +57,7 @@ export default function Contact() {
 		}))
 	}
 
+	useEffect(() => () => controller.abort(), [])
 	useEffect(() => {
 		let timerID: NodeJS.Timeout
 		if (responseMsg != "")
@@ -63,6 +78,7 @@ export default function Contact() {
 						required
 						value={contactMessage.subject}
 						onChange={(event) => handleChangeValues(event)}
+						disabled={isFetching}
 					/>
 				</label>
 
@@ -74,6 +90,7 @@ export default function Contact() {
 						required
 						value={contactMessage.email}
 						onChange={(event) => handleChangeValues(event)}
+						disabled={isFetching}
 					/>
 				</label>
 
@@ -82,24 +99,30 @@ export default function Contact() {
 					<textarea
 						name="message"
 						rows={5}
-						maxLength={400}
+						maxLength={300}
 						required
 						value={contactMessage.message}
+						disabled={isFetching}
 						onChange={(event) =>
 							handleChangeValues(event)
 						}></textarea>
 				</label>
 
-				<button type="submit">Enviar mensagem</button>
+				<button type="submit" disabled={isFetching}>
+					Enviar mensagem
+					{isFetching && (
+						<span className={style.loader}>
+							<RiLoader4Fill />
+						</span>
+					)}
+				</button>
 
-				<span
-					className={
-						responseMsg.match("sucesso")
-							? style.messageSuccess
-							: style.messageError
-					}>
-					{responseMsg}
-				</span>
+				{isErrorMessage && responseMsg.length > 0 && (
+					<span className={style.messageError}>{responseMsg}</span>
+				)}
+				{!isErrorMessage && responseMsg.length > 0 && (
+					<span className={style.messageSuccess}>{responseMsg}</span>
+				)}
 			</form>
 		</section>
 	)
