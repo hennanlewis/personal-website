@@ -48,6 +48,5 @@ export default async function handler(
 	if (acknowledged)
 		return res.status(200).json({ msg: "Mensagem enviada com sucesso! 😌" })
 
-	res.status(500).json({ msg: "Ocorreu um erro no servidor 🤯" })
-	return
+	return res.status(500).json({ msg: "Ocorreu um erro no servidor 🤯" })
 }

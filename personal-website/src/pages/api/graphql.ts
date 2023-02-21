@@ -10,7 +10,6 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
 
 	const clearedPinnedRepos = response.data.user.pinnedItems.nodes.map(
 		(repo: Repository) => {
-			//prettier-ignore
 			const { id, name, description, homepageUrl, url, repositoryTopics, object } = repo
 
 			const imageName: string[] =
@@ -18,7 +17,6 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
 					?.filter((item) => item.name.match(/Screenshot/gi))
 					.map((item) => item.name) ?? []
 
-			//prettier-ignore
 			return { id, name, description, homepageUrl, url, repositoryTopics, imageName }
 		}
 	)

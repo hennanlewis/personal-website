@@ -1,4 +1,3 @@
-"use client"
 import Link from "next/link"
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs"
 
@@ -11,7 +10,6 @@ const links = [
 	{ href: "/contato", label: "Contato" },
 ]
 
-//prettier-ignore
 const socialLinks = [
 	{ href: "https://github.com/hennanlewis", icon: <BsGithub />, label: "/hennanlewis" },
 	{ href: "https://linkedin.com/in/hennanlewis", icon: <BsLinkedin />, label: "/hennanlewis" },

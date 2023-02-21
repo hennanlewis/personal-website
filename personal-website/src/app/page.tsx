@@ -1,33 +1,25 @@
+import About from "@/components/About"
 import Contact from "@/components/Contact"
-import RepositorieCard from "@/components/RepositoryCard"
+import Intro from "@/components/Intro"
+import RepositorieCard from "@/components/ProjectCards"
 
-import { promiseErrorHandler } from "../utils/promiseErrorHandler"
 import style from "./page.module.css"
 
 async function getData() {
-	const url = `${process.env.VERCEL_URL}/api/graphql`
-	const [response, error] = await promiseErrorHandler(
-		fetch(url, {
-			next: { revalidate: 10 },
-		})
-	)
-	if (!response) return []
-	return await response.json()
+	const url = `${process.env.DOMAIN_URL}/api/graphql`
+	const response = await fetch(url, { next: { revalidate: 60 * 60 } })
+	return response?.json() ?? []
 }
 
 export default async function Home() {
 	const pinnedRepositories: PinnedRepository[] = await getData()
 	return (
 		<main className={style.main}>
-			<p>Olá, sou Hennan Lewis e sou desenvolvedor WEB.</p>
-			<p>
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
-				illum odit voluptatum adipisci facilis. Obcaecati, quidem.
-				Aliquam dignissimos ea aliquid, sit fugiat eos quisquam vel.
-				Ratione temporibus quaerat doloribus recusandae!
-			</p>
-
-			<RepositorieCard pinnedRepositories={pinnedRepositories} />
+			<Intro />
+			<About />
+			{pinnedRepositories.length > 0 && (
+				<RepositorieCard pinnedRepositories={pinnedRepositories} />
+			)}
 			<Contact />
 		</main>
 	)

@@ -14,7 +14,7 @@ export default function RepositorieCard({
 		<section id="projects">
 			<h1 className={style.projectsTitle}>Projetos</h1>
 			<div className={style.repositorySection}>
-				{pinnedRepositories?.map((repositorie) => (
+				{pinnedRepositories.map((repositorie) => (
 					<div key={repositorie.id} className={style.repositoryCard}>
 						<div className={style.imageFrame}>
 							{repositorie.imageName.length > 0 &&

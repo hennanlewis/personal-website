@@ -22,16 +22,15 @@
 
 	* {
 		font-family: Calibri;
-		box-sizing: content-box;
+		box-sizing: border-box;
 	}
 
 	body {
 		display: flex;
 		flex-direction: column;
-		width: 100vw;
+		width: 100%;
 		min-height: 100vh;
 		color: var(--color-text-base);
 		background: var(--color-background-base);
-		overflow-x: hidden;
 	}
 }

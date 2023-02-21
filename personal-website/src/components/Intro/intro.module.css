@@ -1,0 +1,25 @@
+.mainPanel {
+	@apply flex justify-center items-center w-full h-screen p-10 bg-skin-support;
+}
+
+.highlight {
+	@apply flex flex-col justify-center items-center w-full;
+}
+
+.highlight h2 {
+	text-shadow: 0 0 3px #fff;
+	@apply flex flex-col text-4xl text-skin-base;
+}
+
+.highlight h2 span:first-child {
+	@apply italic;
+}
+
+.highlight h2 strong {
+	@apply m-auto font-extrabold text-7xl text-white animate-pulse;
+}
+
+.highlight h3 {
+	text-shadow: 1px 1px 3px #000;
+	@apply m-auto font-extrabold text-[2.5rem] text-center sm:text-left text-primary;
+}

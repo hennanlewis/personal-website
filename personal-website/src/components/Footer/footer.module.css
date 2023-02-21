@@ -1,13 +1,13 @@
 .footerInfo {
-	@apply mt-auto bg-skin-support;
+	@apply mt-10 bg-skin-support;
 }
 
 .footerInfo footer {
-	@apply flex flex-wrap gap-40 max-w-[90vw] w-[60rem] m-auto p-10;
+	@apply flex flex-col sm:flex-row justify-start sm:justify-between gap-4 max-w-[90vw] w-[50rem] m-auto p-10;
 }
 
 .social {
-	@apply self-end;
+	@apply sm:self-end;
 }
 
 .social ul {

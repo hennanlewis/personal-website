@@ -1,0 +1,27 @@
+.mainPanel {
+	@apply flex flex-col w-full -mt-4 p-4 sm:p-8 pb-20 bg-skin-support;
+}
+
+.mainPanel h2, .mainPanel p {
+	@apply max-w-[90vw] w-[35rem] mx-auto px-2 sm:p-2 py-2;
+}
+
+.mainPanel h2 {
+	@apply font-bold text-4xl text-white
+}
+
+.mainPanel p {
+	@apply text-justify indent-10;
+}
+
+.social {
+	@apply flex flex-wrap gap-4 max-w-[90vw] w-[35rem] m-auto p-4 text-lg;
+}
+
+.social li {
+	@apply flex justify-between items-center m-auto;
+}
+
+.social li a {
+	@apply flex justify-center items-center text-center
+}
