@@ -1,7 +1,7 @@
 import Link from "next/link"
-import { TechIcons } from "../TechIcons"
 
-import style from "./repositorycard.module.css"
+import { TechIcons } from "../TechIcons"
+import style from "./projectscard.module.css"
 
 interface RepositoryCardProps {
 	pinnedRepositories: PinnedRepository[]
@@ -11,11 +11,11 @@ export default function RepositorieCard({
 	pinnedRepositories,
 }: RepositoryCardProps) {
 	return (
-		<section id="projects">
-			<h1 className={style.projectsTitle}>Projetos</h1>
-			<div className={style.repositorySection}>
+		<section className={style.projectsPanel}>
+			<h2 className={style.projectsTitle}>Projetos</h2>
+			<div className={style.projectsSection}>
 				{pinnedRepositories.map((repositorie) => (
-					<div key={repositorie.id} className={style.repositoryCard}>
+					<div key={repositorie.id} className={style.projectsCard}>
 						<div className={style.imageFrame}>
 							{repositorie.imageName.length > 0 &&
 								repositorie.imageName.map((image) => (

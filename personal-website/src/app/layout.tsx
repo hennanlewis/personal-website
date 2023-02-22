@@ -1,7 +1,10 @@
 import { Footer } from "@/components/Footer"
 import { TopBar } from "@/components/TopBar"
+import { Signika } from "@next/font/google"
 
 import "./globals.css"
+
+const signika = Signika({ subsets: ["latin"], variable: "--font-signika" })
 
 export default function RootLayout({
 	children,
@@ -10,7 +13,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="pt-br">
-			<body>
+			<body className={signika.variable}>
 				{children}
 				<Footer />
 			</body>

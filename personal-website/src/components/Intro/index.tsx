@@ -7,7 +7,7 @@ export default function Intro() {
 				<h2>
 					<span>Olá, sou</span> <strong>Hennan Lewis</strong>
 				</h2>
-				<h3>Desenvolvedor Frontend</h3>
+				<h3>&lt;Desenvolvedor Frontend/&gt;</h3>
 			</div>
 		</section>
 	)

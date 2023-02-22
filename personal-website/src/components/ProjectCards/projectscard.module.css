@@ -1,16 +1,20 @@
+.projectsPanel {
+	@apply my-4
+}
+
 .projectsTitle {
-	@apply max-w-[90vw] w-[52rem] m-4 px-6 py-2 font-bold text-4xl bg-skin-support shadow-md shadow-black rounded-xl;
+	@apply max-w-[95vw] w-[52rem] my-4 px-6 py-2 font-bold text-3xl bg-skin-support shadow-md shadow-black rounded-xl text-white;
 }
 
-.repositorySection {
-	@apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[90vw] w-[52rem] m-auto;
+.projectsSection {
+	@apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[90vw] w-[52rem] gap-6 m-auto p-2 lg:px-6;
 }
 
-.repositoryCard {
-	@apply flex flex-col gap-4 mx-4 mb-8 p-6 bg-skin-support box-border shadow-md hover:shadow-[0_0.5rem_1rem_#000] shadow-black rounded-md hover:scale-105 duration-200 ease-in;
+.projectsCard {
+	@apply flex flex-col gap-4 p-6 bg-skin-support box-border shadow-md hover:shadow-[0_0.5rem_1rem_#000] shadow-black rounded-md hover:scale-105 duration-200 ease-in;
 }
 
-.repositoryCard h2 {
+.projectsCard h2 {
 	@apply font-bold text-xl leading-6 uppercase;
 }
 
@@ -18,7 +22,7 @@
 	@apply w-full aspect-video overflow-hidden bg-black rounded-md;
 }
 
-.repositoryCard p {
+.projectsCard p {
 	@apply leading-5;
 }
 

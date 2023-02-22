@@ -11,25 +11,30 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				signika: ["var(--font-signika)"],
+				calibri: "calibri"
+			},
 			screens: {
-				sm: "480px"
+				xs: "360px",
+				sm: "480px",
 			},
 			colors: {
-				primary: "var(--color-primary)"
+				primary: "var(--color-primary)",
 			},
 			textColor: {
 				skin: {
 					base: "var(--color-text-base)",
 					muted: "var(--color-text-muted)",
-				}
+				},
 			},
 			backgroundColor: {
 				skin: {
 					base: "var(--color-background-base)",
 					muted: "var(--color-background-muted)",
-					support: "var(--color-background-support)"
-				}
-			}
+					support: "var(--color-background-support)",
+				},
+			},
 		},
 	},
 	plugins: [],

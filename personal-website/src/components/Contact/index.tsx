@@ -66,8 +66,8 @@ export default function Contact() {
 	}, [responseMsg])
 
 	return (
-		<section className={style.contactTitle}>
-			<h1>Contato</h1>
+		<section className={style.contactPanel}>
+			<h1 className={style.contactTitle}>Contato</h1>
 			<form onSubmit={handleSubmit}>
 				<label>
 					<span>Assunto:</span>

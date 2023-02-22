@@ -1,22 +1,22 @@
-.contactTitle h1 {
-	@apply max-w-[90vw] w-[52rem] px-6 py-2 m-4 font-bold text-4xl bg-skin-support shadow-md shadow-black rounded-xl;
+.contactTitle {
+	@apply max-w-[95vw] w-[52rem] px-6 py-2 my-4 font-bold text-3xl bg-skin-support shadow-md shadow-black rounded-xl text-white;
 }
 
-.contactTitle form,
-.contactTitle form label {
+.contactPanel form,
+.contactPanel form label {
 	@apply flex flex-col max-w-[80vw] w-[30rem] m-auto;
 }
 
-.contactTitle form {
+.contactPanel form {
 	@apply gap-4;
 }
 
-.contactTitle form textarea,
-.contactTitle form input {
+.contactPanel form textarea,
+.contactPanel form input {
 	@apply resize-none px-2 py-1 text-black rounded;
 }
 
-.contactTitle form button {
+.contactPanel form button {
 	@apply relative flex justify-center px-2 py-1 font-extrabold text-lg bg-primary hover:brightness-125 hover:shadow hover:scale-105 text-white border border-white/20 rounded duration-200;
 }
 

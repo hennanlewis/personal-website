@@ -1,18 +1,21 @@
 import Link from "next/link"
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs"
+
 import style from "./about.module.css"
 
 const socialLinks = [
 	{ href: "https://github.com/hennanlewis", icon: <BsGithub />, label: "/GitHub" },
 	{ href: "https://linkedin.com/in/hennanlewis", icon: <BsLinkedin />, label: "/LinkedIn" },
 	{ href: "https://instagram.com/hennanlewis", icon: <BsInstagram />, label: "/Instagram" },
-	{ href: "https://twitter.com/hennanlewis", icon: <BsTwitter />, label: "/Twitter" },
+	{ href: "https://twitter.com/hennanlewis", icon: <BsTwitter />, label: "/Twitter" }
 ]
 
 export default function About() {
 	return (
-		<section className={style.mainPanel}>
-			<h2>Sobre mim</h2>
+		<section className={style.aboutPanel}>
+			<h2 className={style.aboutTitle}>
+				Sobre mim
+			</h2>
 			<p>
 				Sempre tive muita curiosidade por computadores e tecnologia.
 				Optei por fazer uma escola de tempo integral durante meu ensino
@@ -38,7 +41,7 @@ export default function About() {
 			</p>
 			<p>
 				Hoje, as tecnologias que mais tenho domínio são Tailwind CSS,
-				TypeScript, Reac.JS, Next.JS e MongoDB. Fora as estudar sobre
+				TypeScript, React.JS, Next.JS e MongoDB. Fora as estudar sobre
 				minha área de atuação, nesse começo de 2023 comecei a estudar um
 				pouco de japonês e criei um canal no YouTube pra mostrar meu
 				progresso. Para entrar em contato, tem um formulário no fim da

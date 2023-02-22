@@ -21,16 +21,14 @@
 	}
 
 	* {
-		font-family: Calibri;
 		box-sizing: border-box;
 	}
 
 	body {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
-		min-height: 100vh;
-		color: var(--color-text-base);
 		background: var(--color-background-base);
+		color: var(--color-text-base);
+		@apply font-signika
 	}
 }
