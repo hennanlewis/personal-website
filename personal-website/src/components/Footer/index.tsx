@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs"
+import { socialItems } from "../SocialItems"
 
 import styles from "./footer.module.css"
 
@@ -8,13 +9,6 @@ const links = [
 	{ href: "/projetos-vertigem", label: "Projetos vertigem" },
 	{ href: "/diario-nihongo", label: "Diário Nihongo" },
 	{ href: "/contato", label: "Contato" },
-]
-
-const socialLinks = [
-	{ href: "https://github.com/hennanlewis", icon: <BsGithub />, label: "/hennanlewis" },
-	{ href: "https://linkedin.com/in/hennanlewis", icon: <BsLinkedin />, label: "/hennanlewis" },
-	{ href: "https://instagram.com/hennanlewis", icon: <BsInstagram />, label: "/hennanlewis" },
-	{ href: "https://twitter.com/hennanlewis", icon: <BsTwitter />, label: "/hennanlewis" },
 ]
 
 export const Footer = () => {
@@ -31,11 +25,11 @@ export const Footer = () => {
 				<section className={styles.social}>
 					<span>Redes Sociais:</span>
 					<ul>
-						{socialLinks.map(({ href, icon, label }) => (
+						{socialItems.map(({ href, icon, nick }) => (
 							<li key={href}>
 								<Link href={href} target="_blank">
 									{icon}
-									<span aria-hidden="true">{label}</span>
+									<span aria-hidden="true">{nick}</span>
 								</Link>
 							</li>
 						))}

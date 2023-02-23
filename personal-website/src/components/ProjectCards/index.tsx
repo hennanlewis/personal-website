@@ -11,7 +11,7 @@ export default function RepositorieCard({
 	pinnedRepositories,
 }: RepositoryCardProps) {
 	return (
-		<section className={style.projectsPanel}>
+		<section id="projects" className={style.projectsPanel}>
 			<h2 className={style.projectsTitle}>Projetos</h2>
 			<div className={style.projectsSection}>
 				{pinnedRepositories.map((repositorie) => (

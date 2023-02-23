@@ -1,14 +1,7 @@
+import { socialItems } from "@/components/SocialItems"
 import Link from "next/link"
-import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs"
 
 import style from "./about.module.css"
-
-const socialLinks = [
-	{ href: "https://github.com/hennanlewis", icon: <BsGithub />, label: "/GitHub" },
-	{ href: "https://linkedin.com/in/hennanlewis", icon: <BsLinkedin />, label: "/LinkedIn" },
-	{ href: "https://instagram.com/hennanlewis", icon: <BsInstagram />, label: "/Instagram" },
-	{ href: "https://twitter.com/hennanlewis", icon: <BsTwitter />, label: "/Twitter" }
-]
 
 export default function About() {
 	return (
@@ -49,7 +42,7 @@ export default function About() {
 			</p>
 
 			<ul className={style.social}>
-				{socialLinks.map(({ href, icon, label }) => (
+				{socialItems.map(({ href, icon, label }) => (
 					<li key={href}>
 						<Link href={href} target="_blank">
 							{icon}

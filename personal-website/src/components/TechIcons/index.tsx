@@ -1,15 +1,5 @@
 import Link from "next/link"
-import {
-	SiCss3,
-	SiExpress,
-	SiHtml5,
-	SiMongodb,
-	SiNodedotjs,
-	SiReact,
-	SiTailwindcss,
-	SiTypescript,
-	SiVite,
-} from "react-icons/si"
+import { SiCss3, SiExpress, SiHtml5, SiMongodb, SiNodedotjs, SiReact, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si"
 
 interface ObjectIcon {
 	[key: string]: JSX.Element
