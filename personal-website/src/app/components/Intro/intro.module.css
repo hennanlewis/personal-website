@@ -7,11 +7,11 @@
 }
 
 .highlight h2 {
-	@apply flex flex-wrap sm:flex-col gap-2 sm:gap-0 sm:not-italic text-3xl text-skin-base md:scale-110;
+	@apply flex flex-wrap sm:flex-col gap-2 sm:gap-0 sm:not-italic text-3xl text-skin-support md:scale-110;
 }
 
 .highlight h2 strong {
-	@apply text-4xl xs:text-3xl sm:text-6xl text-white animate-pulse;
+	@apply text-4xl xs:text-3xl sm:text-6xl text-skin-main animate-pulse;
 }
 
 .highlight h3 {

@@ -13,7 +13,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				signika: ["var(--font-signika)"],
-				calibri: "calibri"
+				calibri: "calibri",
 			},
 			screens: {
 				xs: "360px",
@@ -24,8 +24,8 @@ module.exports = {
 			},
 			textColor: {
 				skin: {
-					base: "var(--color-text-base)",
-					muted: "var(--color-text-muted)",
+					main: "var(--color-text-main)",
+					support: "var(--color-text-support)",
 				},
 			},
 			backgroundColor: {

@@ -5,30 +5,21 @@
 @layer base {
 	:root {
 		--color-primary: #ea0a40;
-		--color-text-base: #bdbdad;
-		--color-text-muted: #64686c;
+		--color-text-main: #ffffff;
+		--color-text-support: #bdbdad;
 		--color-background-base: #122024;
 		--color-background-muted: #1a0e0d;
 		--color-background-support: #101214;
 	}
 
-	.light-mode {
-		--color-primary: #ea0a40;
-		--color-text-base: #000;
-		--color-text-muted: #1e2429;
-		--color-background-base: #64686c;
-		--color-background-muted: #ededed;
-	}
-
-	* {
-		box-sizing: border-box;
-	}
+	* { box-sizing: border-box; }
 
 	body {
 		display: flex;
 		flex-direction: column;
+		min-height: 100vh;
 		background: var(--color-background-base);
-		color: var(--color-text-base);
+		color: var(--color-text-support);
 		@apply font-signika
 	}
 }

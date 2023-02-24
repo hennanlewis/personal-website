@@ -1,14 +1,13 @@
 import { socialItems } from "@/components/SocialItems"
 import Link from "next/link"
+import FullText from "../../../components/FullText"
 
-import style from "./about.module.css"
+import style from "./aboutme.module.css"
 
-export default function About() {
+export default function AboutMe() {
 	return (
-		<section className={style.aboutPanel}>
-			<h2 className={style.aboutTitle}>
-				Sobre mim
-			</h2>
+		<FullText darkBG>
+			<h1>Sobre mim</h1>
 			<p>
 				Sempre tive muita curiosidade por computadores e tecnologia.
 				Optei por fazer uma escola de tempo integral durante meu ensino
@@ -51,6 +50,6 @@ export default function About() {
 					</li>
 				))}
 			</ul>
-		</section>
+		</FullText>
 	)
 }

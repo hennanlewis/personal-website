@@ -1,11 +1,14 @@
-.navBar {
-	@apply flex justify-center border-t-4 border-primary bg-skin-support;
+.topBar {
+	@apply fixed flex justify-center w-full border-t-4 border-primary bg-skin-support;
 }
 
 .menu {
-	@apply flex justify-end items-center gap-4 max-w-[90vw] w-[60rem] px-4 py-3 uppercase text-sm font-semibold;
+	@apply flex justify-end items-center gap-4 max-w-[90vw] w-[60rem] px-4 pt-3 uppercase text-sm font-semibold;
 }
 
 .menu li {
-	@apply flex justify-end items-center px-4 py-1 text-skin-base rounded border-b-4 border-transparent hover:bg-skin-support hover:border-primary duration-200;
+	@apply flex justify-end items-center px-4 py-1 text-skin-support rounded border-b-4 border-transparent hover:bg-skin-support hover:border-primary duration-200;
+}
+.menu li:first-child {
+	@apply mr-auto text-xl text-skin-main;
 }

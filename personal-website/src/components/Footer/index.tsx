@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs"
 import { socialItems } from "../SocialItems"
 
 import styles from "./footer.module.css"
@@ -13,8 +12,8 @@ const links = [
 
 export const Footer = () => {
 	return (
-		<section className={styles.footerInfo}>
-			<footer>
+		<section className={styles.footer}>
+			<footer className={styles.footerInfo}>
 				<ul>
 					{links.map(({ href, label }) => (
 						<li key={href}>

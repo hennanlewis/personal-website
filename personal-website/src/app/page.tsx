@@ -1,7 +1,7 @@
-import About from "@/components/About"
-import Contact from "@/components/Contact"
-import Intro from "@/components/Intro"
-import RepositorieCard from "@/components/ProjectCards"
+import AboutMe from "@/app/components/AboutMe"
+import Contact from "@/app/components/ContactForm"
+import Intro from "@/app/components/Intro"
+import RepositoriesInfo from "@/app/components/ProjectCards"
 import { Footer } from "@/components/Footer"
 
 import style from "./page.module.css"
@@ -19,9 +19,9 @@ export default async function Home() {
 		<>
 			<main className={style.main}>
 				<Intro />
-				<About />
+				<AboutMe />
 				{pinnedRepositories.length > 0 && (
-					<RepositorieCard pinnedRepositories={pinnedRepositories} />
+					<RepositoriesInfo pinnedRepositories={pinnedRepositories} />
 				)}
 				<Contact />
 			</main>

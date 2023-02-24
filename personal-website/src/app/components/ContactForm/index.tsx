@@ -3,7 +3,7 @@ import { promiseErrorHandler } from "@/utils/promiseErrorHandler"
 import { ChangeEvent, FormEvent, useEffect, useState } from "react"
 import { RiLoader4Fill } from "react-icons/ri"
 
-import style from "./contact.module.css"
+import style from "./contactform.module.css"
 
 const initialContactValues: ContactProps = {
 	email: "",
@@ -67,7 +67,7 @@ export default function Contact() {
 
 	return (
 		<section className={style.contactPanel}>
-			<h1 className={style.contactTitle}>Contato</h1>
+			<h1 className={style.contactPanelTitle}>Contato</h1>
 			<form onSubmit={handleSubmit}>
 				<label>
 					<span>Assunto:</span>

@@ -1,5 +1,5 @@
-.contactTitle {
-	@apply max-w-[95vw] w-[52rem] px-6 py-2 my-4 font-bold text-3xl bg-skin-support shadow-md shadow-black rounded-xl text-white;
+.contactPanelTitle {
+	@apply max-w-[95vw] w-[52rem] px-6 py-2 my-4 font-bold text-3xl bg-skin-support shadow-md shadow-black rounded-xl text-skin-main;
 }
 
 .contactPanel form,
@@ -17,7 +17,7 @@
 }
 
 .contactPanel form button {
-	@apply relative flex justify-center px-2 py-1 font-extrabold text-lg bg-primary hover:brightness-125 hover:shadow hover:scale-105 text-white border border-white/20 rounded duration-200;
+	@apply relative flex justify-center px-2 py-1 font-extrabold text-lg bg-primary hover:brightness-125 hover:shadow hover:scale-105 text-skin-main border border-white/20 rounded duration-200;
 }
 
 .loader {

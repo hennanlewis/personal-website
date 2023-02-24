@@ -1,0 +1,19 @@
+.fullTextPanel {
+	@apply flex flex-col w-full -mt-4 py-4;
+}
+
+.fullTextPanelDarkBG {
+	@apply fullTextPanel bg-skin-support;
+}
+
+.fullTextPanel h1:first-child, .fullTextPanel p {
+	@apply max-w-[95vw] w-[35rem] mx-auto;
+}
+
+.fullTextPanel h1:first-child {
+	@apply mt-2 pl-2 font-bold text-3xl text-skin-main;
+}
+
+.fullTextPanel p {
+	@apply p-2 text-justify indent-10;
+}

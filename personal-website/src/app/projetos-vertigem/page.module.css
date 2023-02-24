@@ -1,3 +1,7 @@
 .main {
 	@apply flex flex-col items-center justify-center gap-4 mb-auto;
 }
+
+.initialTitle {
+	@apply pt-20;
+}

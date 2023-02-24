@@ -1,29 +1,17 @@
-.projectsPanel {
-	@apply my-4
-}
-
-.projectsTitle {
-	@apply max-w-[95vw] w-[52rem] my-4 px-6 py-2 font-bold text-3xl bg-skin-support shadow-md shadow-black rounded-xl text-white;
-}
-
-.projectsSection {
-	@apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[90vw] w-[52rem] gap-6 m-auto p-2 lg:px-6;
-}
-
-.projectsCard {
+.projectCard {
 	@apply flex flex-col gap-4 p-6 bg-skin-support box-border shadow-md hover:shadow-[0_0.5rem_1rem_#000] shadow-black rounded-md hover:scale-105 duration-200 ease-in;
 }
 
-.projectsCard h2 {
-	@apply font-bold text-xl leading-6 uppercase;
-}
-
 .imageFrame {
-	@apply w-full aspect-video overflow-hidden bg-black rounded-md;
+	@apply relative w-full aspect-video overflow-hidden bg-black rounded-md;
 }
 
-.projectsCard p {
+.projectCard p {
 	@apply leading-5;
+}
+
+.projectTitle {
+	@apply font-bold text-xl leading-6 text-skin-main uppercase;
 }
 
 .projectTopics {
@@ -34,7 +22,7 @@
 	@apply flex flex-wrap gap-2 text-xl border-primary;
 }
 
-.projectTopics h3 span {
+.projectTopics h4 span {
 	@apply hidden w-0 h-0 overflow-hidden;
 }
 
@@ -47,5 +35,5 @@
 }
 
 .projectLinks a:nth-child(2) {
-	@apply bg-primary text-white;
+	@apply bg-primary text-skin-main;
 }
