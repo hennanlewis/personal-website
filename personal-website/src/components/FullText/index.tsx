@@ -7,8 +7,8 @@ interface FullTextProps {
 
 export default function FullText({ children, darkBG }: FullTextProps) {
 	return (
-		<section className={darkBG ? style.fullTextPanelDarkBG : style.fullTextPanel}>
+		<article className={darkBG ? style.fullTextPanelDarkBG : style.fullTextPanel}>
 			{children}
-		</section>
+		</article>
 	)
 }

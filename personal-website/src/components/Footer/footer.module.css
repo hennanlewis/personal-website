@@ -1,19 +1,7 @@
-.footer {
-	@apply flex justify-center mt-10 p-10 bg-skin-support;
-}
-
 .footerInfo {
-	@apply flex flex-col sm:flex-row justify-start sm:justify-between gap-4 max-w-[90vw] w-[50rem];
+	@apply flex flex-col sm:flex-row justify-start sm:justify-between gap-4 max-w-[90vw] w-[50rem] py-10;
 }
 
-.social {
-	@apply sm:self-end;
-}
-
-.social ul {
-	@apply flex items-baseline gap-3 text-lg;
-}
-
-.social ul li a span {
-	@apply hidden;
-}
+.social { @apply sm:self-end; }
+.social ul { @apply flex items-baseline gap-3 text-lg; }
+.social ul li a span { @apply hidden; }

@@ -1,5 +1,7 @@
+.contactPanel { @apply mt-4 mb-10; }
+
 .contactPanelTitle {
-	@apply max-w-[95vw] w-[52rem] px-6 py-2 my-4 font-bold text-3xl bg-skin-support shadow-md shadow-black rounded-xl text-skin-main;
+	@apply max-w-[95vw] w-[52rem] px-6 py-2 font-bold text-3xl bg-skin-support shadow-md shadow-black rounded-xl text-skin-main;
 }
 
 .contactPanel form,

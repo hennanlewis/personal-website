@@ -1,3 +1,3 @@
 .main {
-	@apply flex flex-col items-center justify-center gap-4 mb-auto;
+	@apply flex flex-col items-center justify-center mb-auto;
 }

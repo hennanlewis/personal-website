@@ -1,4 +1,5 @@
 "use client"
+import { FadeComponent } from "@/components/FadeComponent"
 import { promiseErrorHandler } from "@/utils/promiseErrorHandler"
 import { ChangeEvent, FormEvent, useEffect, useState } from "react"
 import { RiLoader4Fill } from "react-icons/ri"
@@ -67,63 +68,69 @@ export default function Contact() {
 
 	return (
 		<section className={style.contactPanel}>
-			<h1 className={style.contactPanelTitle}>Contato</h1>
-			<form onSubmit={handleSubmit}>
-				<label>
-					<span>Assunto:</span>
-					<input
-						type="text"
-						name="subject"
-						maxLength={100}
-						required
-						value={contactMessage.subject}
-						onChange={(event) => handleChangeValues(event)}
-						disabled={isFetching}
-					/>
-				</label>
+			<FadeComponent flexCol delay>
+				<h1 className={style.contactPanelTitle}>Contato</h1>
+				<form onSubmit={handleSubmit}>
+					<label>
+						<span>Assunto:</span>
+						<input
+							type="text"
+							name="subject"
+							maxLength={100}
+							required
+							value={contactMessage.subject}
+							onChange={(event) => handleChangeValues(event)}
+							disabled={isFetching}
+						/>
+					</label>
 
-				<label>
-					<span>E-mail:</span>
-					<input
-						type="email"
-						name="email"
-						required
-						value={contactMessage.email}
-						onChange={(event) => handleChangeValues(event)}
-						disabled={isFetching}
-					/>
-				</label>
+					<label>
+						<span>E-mail:</span>
+						<input
+							type="email"
+							name="email"
+							required
+							value={contactMessage.email}
+							onChange={(event) => handleChangeValues(event)}
+							disabled={isFetching}
+						/>
+					</label>
 
-				<label>
-					<span>Mensagem</span>
-					<textarea
-						name="message"
-						rows={5}
-						maxLength={300}
-						required
-						value={contactMessage.message}
-						disabled={isFetching}
-						onChange={(event) =>
-							handleChangeValues(event)
-						}></textarea>
-				</label>
+					<label>
+						<span>Mensagem</span>
+						<textarea
+							name="message"
+							rows={5}
+							maxLength={300}
+							required
+							value={contactMessage.message}
+							disabled={isFetching}
+							onChange={(event) =>
+								handleChangeValues(event)
+							}></textarea>
+					</label>
 
-				<button type="submit" disabled={isFetching}>
-					Enviar mensagem
-					{isFetching && (
-						<span className={style.loader}>
-							<RiLoader4Fill />
+					<button type="submit" disabled={isFetching}>
+						Enviar mensagem
+						{isFetching && (
+							<span className={style.loader}>
+								<RiLoader4Fill />
+							</span>
+						)}
+					</button>
+
+					{isErrorMessage && responseMsg.length > 0 && (
+						<span className={style.messageError}>
+							{responseMsg}
 						</span>
 					)}
-				</button>
-
-				{isErrorMessage && responseMsg.length > 0 && (
-					<span className={style.messageError}>{responseMsg}</span>
-				)}
-				{!isErrorMessage && responseMsg.length > 0 && (
-					<span className={style.messageSuccess}>{responseMsg}</span>
-				)}
-			</form>
+					{!isErrorMessage && responseMsg.length > 0 && (
+						<span className={style.messageSuccess}>
+							{responseMsg}
+						</span>
+					)}
+				</form>
+			</FadeComponent>
 		</section>
 	)
 }

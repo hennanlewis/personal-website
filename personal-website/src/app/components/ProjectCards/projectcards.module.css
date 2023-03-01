@@ -1,13 +1,11 @@
-.projectsPanel {
-	@apply my-4;
-}
+.projectsPanel { @apply mt-4; }
 
 .projectsPanelTitle {
 	@apply max-w-[95vw] w-[52rem] my-4 px-6 py-2 font-bold text-3xl bg-skin-support shadow-md shadow-black rounded-xl text-skin-main;
 }
 
 .projectsSection {
-	@apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[90vw] w-[52rem] gap-6 m-auto p-2 lg:px-6;
+	@apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[90vw] w-[52rem] gap-6 mb-10 m-auto p-3 lg:px-6;
 }
 
 .projectsCard {

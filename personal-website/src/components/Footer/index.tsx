@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { FadeComponent } from "../FadeComponent"
 import { socialItems } from "../SocialItems"
 
 import styles from "./footer.module.css"
@@ -12,7 +13,7 @@ const links = [
 
 export const Footer = () => {
 	return (
-		<section className={styles.footer}>
+		<FadeComponent darkBG>
 			<footer className={styles.footerInfo}>
 				<ul>
 					{links.map(({ href, label }) => (
@@ -35,6 +36,6 @@ export const Footer = () => {
 					</ul>
 				</section>
 			</footer>
-		</section>
+		</FadeComponent>
 	)
 }

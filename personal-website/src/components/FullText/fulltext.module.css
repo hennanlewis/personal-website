@@ -1,9 +1,5 @@
 .fullTextPanel {
-	@apply flex flex-col w-full -mt-4 py-4;
-}
-
-.fullTextPanelDarkBG {
-	@apply fullTextPanel bg-skin-support;
+	@apply flex flex-col w-full -mt-4 pt-10 pb-4 bg-skin-support;
 }
 
 .fullTextPanel h1:first-child, .fullTextPanel p {
