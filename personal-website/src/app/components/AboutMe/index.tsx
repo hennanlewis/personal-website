@@ -3,7 +3,7 @@ import { socialItems } from "@/components/SocialItems"
 import Link from "next/link"
 import FullText from "../../../components/FullText"
 
-import style from "./aboutme.module.css"
+import styles from "./aboutme.module.css"
 
 export default function AboutMe() {
 	return (
@@ -44,12 +44,12 @@ export default function AboutMe() {
 						em contato, tem um formulário no fim da página, ou entre
 						em contato pelas minhas redes sociais:
 					</p>
-					<ul className={style.social}>
-						{socialItems.map(({ href, icon, label }) => (
+					<ul className={styles.social}>
+						{socialItems.map(({ href, icon, nick }) => (
 							<li key={href}>
 								<Link href={href} target="_blank">
 									{icon}
-									<span aria-hidden="true">{label}</span>
+									<span aria-hidden="true">{nick}</span>
 								</Link>
 							</li>
 						))}

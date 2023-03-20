@@ -4,7 +4,7 @@ import Intro from "@/app/components/Intro"
 import RepositoriesInfo from "@/app/components/ProjectCards"
 import { Footer } from "@/components/Footer"
 
-import style from "./page.module.css"
+import styles from "./page.module.css"
 import { promiseErrorHandler } from "@/utils/promiseErrorHandler"
 
 async function getData() {
@@ -17,7 +17,7 @@ export default async function Home() {
 	const pinnedRepositories: PinnedRepository[] = await getData()
 	return (
 		<>
-			<main className={style.main}>
+			<main className={styles.main}>
 				<Intro />
 				<AboutMe />
 				{pinnedRepositories.length > 0 && (

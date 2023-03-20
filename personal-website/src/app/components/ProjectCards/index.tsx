@@ -1,7 +1,7 @@
 import { FadeComponent } from "@/components/FadeComponent"
 import ProjectCard from "@/components/ProjectCard"
 
-import style from "./projectcards.module.css"
+import styles from "./projectcards.module.css"
 
 interface RepositoryCardProps {
 	pinnedRepositories: PinnedRepository[]
@@ -11,10 +11,10 @@ export default function RepositoriesInfo({
 	pinnedRepositories,
 }: RepositoryCardProps) {
 	return (
-		<section className={style.projectsPanel}>
+		<section className={styles.projectsPanel}>
 			<FadeComponent flexCol delay>
-				<h2 className={style.projectsPanelTitle}>Projetos</h2>
-				<div className={style.projectsSection}>
+				<h2 className={styles.projectsPanelTitle}>Projetos</h2>
+				<div className={styles.projectsSection}>
 					{pinnedRepositories.map((repository) => (
 						<ProjectCard key={repository.id} {...repository} />
 					))}

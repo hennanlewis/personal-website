@@ -1,14 +1,13 @@
-import style from "./fulltext.module.css"
+import styles from "./fulltext.module.css"
 
 interface FullTextProps {
-	darkBG?: boolean
 	children: React.ReactNode
 }
 
-export default function FullText({ children, darkBG }: FullTextProps) {
+export default function FullText({ children }: FullTextProps) {
 	return (
-		<article className={darkBG ? style.fullTextPanelDarkBG : style.fullTextPanel}>
-			{children}
-		</article>
+		<div className={styles.fullTextPanel}>
+			<article className={styles.content}>{children}</article>
+		</div>
 	)
 }

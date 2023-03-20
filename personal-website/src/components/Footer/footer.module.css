@@ -1,7 +1,12 @@
 .footerInfo {
-	@apply flex flex-col sm:flex-row justify-start sm:justify-between gap-4 max-w-[90vw] w-[50rem] py-10;
+	@apply flex flex-col gap-4 max-w-[90vw] w-[50rem] pt-6 pb-4;
+}
+
+.footerInfo div {
+	@apply flex flex-col sm:flex-row justify-start sm:justify-between gap-4 max-w-[90vw] w-[50rem];
 }
 
 .social { @apply sm:self-end; }
 .social ul { @apply flex items-baseline gap-3 text-lg; }
 .social ul li a span { @apply hidden; }
+.copyright { @apply self-center; }

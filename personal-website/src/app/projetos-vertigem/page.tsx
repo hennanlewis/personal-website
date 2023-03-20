@@ -3,7 +3,7 @@ import FullText from "@/components/FullText"
 import ProjectCard from "@/components/ProjectCard"
 import { TopBar } from "@/components/TopBar"
 
-import style from "./page.module.css"
+import styles from "./page.module.css"
 
 const repositorieInfo = {
 	id: "string",
@@ -15,13 +15,13 @@ const repositorieInfo = {
 	imageName: []
 }
 
-export default async function Home() {
+export default async function VertigoProjects() {
 	return (
 		<>
 			<TopBar />
-			<main className={style.main}>
-				<FullText darkBG>
-					<h1 className={style.initialTitle}>Projetos vertigem</h1>
+			<main className={styles.main}>
+				<FullText>
+					<h1 className={styles.initialTitle}>Projetos vertigem</h1>
 					<p>
 						Olá! O design geral deste site/portifólio tem por
 						intuito ser básico e minimalista na medida do possível,

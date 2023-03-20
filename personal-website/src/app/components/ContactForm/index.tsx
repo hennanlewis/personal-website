@@ -4,7 +4,7 @@ import { promiseErrorHandler } from "@/utils/promiseErrorHandler"
 import { ChangeEvent, FormEvent, useEffect, useState } from "react"
 import { RiLoader4Fill } from "react-icons/ri"
 
-import style from "./contactform.module.css"
+import styles from "./contactform.module.css"
 
 const initialContactValues: ContactProps = {
 	email: "",
@@ -67,9 +67,9 @@ export default function Contact() {
 	}, [responseMsg])
 
 	return (
-		<section className={style.contactPanel}>
+		<section className={styles.contactPanel}>
 			<FadeComponent flexCol delay>
-				<h1 className={style.contactPanelTitle}>Contato</h1>
+				<h1 className={styles.contactPanelTitle}>Contato</h1>
 				<form onSubmit={handleSubmit}>
 					<label>
 						<span>Assunto:</span>
@@ -113,19 +113,19 @@ export default function Contact() {
 					<button type="submit" disabled={isFetching}>
 						Enviar mensagem
 						{isFetching && (
-							<span className={style.loader}>
+							<span className={styles.loader}>
 								<RiLoader4Fill />
 							</span>
 						)}
 					</button>
 
 					{isErrorMessage && responseMsg.length > 0 && (
-						<span className={style.messageError}>
+						<span className={styles.messageError}>
 							{responseMsg}
 						</span>
 					)}
 					{!isErrorMessage && responseMsg.length > 0 && (
-						<span className={style.messageSuccess}>
+						<span className={styles.messageSuccess}>
 							{responseMsg}
 						</span>
 					)}

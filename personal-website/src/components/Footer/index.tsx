@@ -15,26 +15,29 @@ export const Footer = () => {
 	return (
 		<FadeComponent darkBG>
 			<footer className={styles.footerInfo}>
-				<ul>
-					{links.map(({ href, label }) => (
-						<li key={href}>
-							<Link href={href}>{label}</Link>
-						</li>
-					))}
-				</ul>
-				<section className={styles.social}>
-					<span>Redes Sociais:</span>
+				<div>
 					<ul>
-						{socialItems.map(({ href, icon, nick }) => (
+						{links.map(({ href, label }) => (
 							<li key={href}>
-								<Link href={href} target="_blank">
-									{icon}
-									<span aria-hidden="true">{nick}</span>
-								</Link>
+								<Link href={href}>{label}</Link>
 							</li>
 						))}
 					</ul>
-				</section>
+					<section className={styles.social}>
+						<span>Redes Sociais:</span>
+						<ul>
+							{socialItems.map(({ href, icon, nick }) => (
+								<li key={href}>
+									<Link href={href} target="_blank">
+										{icon}
+										<span aria-hidden="true">{nick}</span>
+									</Link>
+								</li>
+							))}
+						</ul>
+					</section>
+				</div>
+				<span className={styles.copyright}>© 2023, Hennan Lewis</span>
 			</footer>
 		</FadeComponent>
 	)

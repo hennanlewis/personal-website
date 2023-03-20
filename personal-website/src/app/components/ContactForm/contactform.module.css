@@ -6,7 +6,7 @@
 
 .contactPanel form,
 .contactPanel form label {
-	@apply flex flex-col max-w-[80vw] w-[30rem] m-auto;
+	@apply flex flex-col mt-2 max-w-[80vw] w-[30rem] m-auto;
 }
 
 .contactPanel form {

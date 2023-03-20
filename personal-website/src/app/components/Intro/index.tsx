@@ -1,9 +1,9 @@
-import style from "./intro.module.css"
+import styles from "./intro.module.css"
 
 export default function Intro() {
 	return (
-		<section className={style.mainPanel}>
-			<div className={style.highlight}>
+		<section className={styles.mainPanel}>
+			<div className={styles.highlight}>
 				<h2>
 					<span>Olá, sou</span> <strong>Hennan Lewis</strong>
 				</h2>

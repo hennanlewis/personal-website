@@ -1,15 +1,15 @@
 .fullTextPanel {
-	@apply flex flex-col w-full -mt-4 pt-10 pb-4 bg-skin-support;
+	@apply flex flex-col items-center justify-center gap-4 mb-auto pb-2 w-full bg-skin-support;
 }
 
-.fullTextPanel h1:first-child, .fullTextPanel p {
-	@apply max-w-[95vw] w-[35rem] mx-auto;
+.content {
+	@apply flex flex-col -mt-4 pt-10 pb-4 max-w-[95vw] w-[35rem] mx-auto bg-skin-support
 }
 
-.fullTextPanel h1:first-child {
+.content h1:first-child {
 	@apply mt-2 pl-2 font-bold text-3xl text-skin-main;
 }
 
-.fullTextPanel p {
+.content p {
 	@apply p-2 text-justify indent-10;
 }

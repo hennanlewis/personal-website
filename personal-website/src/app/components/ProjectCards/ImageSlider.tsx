@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import { generateProjectImageURL } from "./generateProjectImageURL"
 
-import style from "./projectcards.module.css"
+import styles from "./projectcards.module.css"
 
 interface ImageSliderProps {
 	repositoryName: string
@@ -26,8 +26,8 @@ export const ImageSlider = ({repositoryName, imageNames}: ImageSliderProps) => {
 						key={`${repositoryName}-${image}`}
 						className={
 							activePosition == index
-								? `${style.slider} ${style.activeSlider}`
-								: style.slider
+								? `${styles.slider} ${styles.activeSlider}`
+								: styles.slider
 						}
 						src={generateProjectImageURL(repositoryName, image)}
 						alt={repositoryName}
