@@ -1,5 +1,5 @@
 import { Footer } from "@/components/Footer"
-import FullText from "@/components/FullText"
+import FullText from "@/components/FullText/DarkPanel"
 import ProjectCard from "@/components/ProjectCard"
 import { TopBar } from "@/components/TopBar"
 

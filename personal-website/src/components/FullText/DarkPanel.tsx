@@ -6,8 +6,8 @@ interface FullTextProps {
 
 export default function FullText({ children }: FullTextProps) {
 	return (
-		<div className={styles.fullTextPanel}>
-			<article className={styles.content}>{children}</article>
+		<div className={styles.FullText}>
+			<article className={styles.DarkFullText}>{children}</article>
 		</div>
 	)
 }

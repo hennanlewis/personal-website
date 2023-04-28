@@ -1,7 +1,7 @@
 import { FadeComponent } from "@/components/FadeComponent"
 import { socialItems } from "@/components/SocialItems"
 import Link from "next/link"
-import FullText from "../../../components/FullText"
+import FullText from "../../../components/FullText/DarkPanel"
 
 import styles from "./aboutme.module.css"
 

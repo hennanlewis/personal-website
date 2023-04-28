@@ -1,15 +1,35 @@
-.fullTextPanel {
+.FullText {
 	@apply flex flex-col items-center justify-center gap-4 mb-auto pb-2 w-full bg-skin-support;
 }
 
-.content {
+.DarkFullText {
 	@apply flex flex-col -mt-4 pt-10 pb-4 max-w-[95vw] w-[35rem] mx-auto bg-skin-support
 }
 
-.content h1:first-child {
+.DarkFullText h1:first-child {
 	@apply mt-2 pl-2 font-bold text-3xl text-skin-main;
 }
 
-.content p {
+.DarkFullText p {
 	@apply p-2 text-justify indent-10;
+}
+
+.CommomPanel {
+	@apply grid max-w-[95vw] w-[50rem] m-auto p-2 md:p-4 text-lg text-white;
+}
+
+.CommomPanel h1 {
+	@apply mt-2 pl-2 font-bold text-3xl text-center text-skin-main;
+}
+
+.CommomPanel h2 {
+	@apply pl-2 font-bold text-2xl text-skin-main border-b border-y-gray-700;
+}
+
+.CommomPanel h2:nth-child(n+2) {
+	@apply mt-4;
+}
+
+.CommomPanel p {
+	@apply mb-4 p-2 text-justify indent-10;
 }
