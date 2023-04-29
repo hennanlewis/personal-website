@@ -3,7 +3,7 @@
 }
 
 .footerInfo div {
-	@apply flex flex-col sm:flex-row justify-start sm:justify-between gap-4 max-w-[90vw] w-[50rem];
+	@apply flex flex-col sm:flex-row justify-start sm:justify-between gap-40 max-w-[90vw] w-[50rem];
 }
 
 .social { @apply sm:self-end; }

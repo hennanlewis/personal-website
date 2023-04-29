@@ -8,7 +8,6 @@ const links = [
 	{ href: "/", label: "Início" },
 	{ href: "/projetos-vertigem", label: "Projetos vertigem" },
 	{ href: "/diario-nihongo", label: "Diário Nihongo" },
-	{ href: "/contato", label: "Contato" },
 ]
 
 export const Footer = () => {

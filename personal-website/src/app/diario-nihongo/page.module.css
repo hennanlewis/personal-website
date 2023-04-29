@@ -3,5 +3,5 @@
 }
 
 .initialTitle { @apply pt-20; }
-.link { @apply flex justify-start gap-2 mt-2 mr-auto p-2 bg-primary brightness-[0.85] hover:brightness-100 text-white leading-none rounded duration-200; }
+.link { @apply flex justify-start items-center gap-2 mt-2 mr-auto px-4 py-3 bg-primary brightness-[0.85] hover:brightness-100 text-white leading-none rounded duration-200; }
 .link svg { @apply translate-y-[3px]; }
