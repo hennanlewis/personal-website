@@ -7,45 +7,39 @@ import styles from "./aboutme.module.css"
 
 export default function AboutMe() {
 	return (
-			<FullText>
-				<FadeComponent flexCol darkBG>
-					<h1>Sobre mim</h1>
-					<p>
-						Sempre tive muita curiosidade por computadores e
-						tecnologia. Optei por fazer uma escola de tempo integral
-						durante meu ensino médio, mais precisamente atrelada ao
-						curso de Redes de Computadores, curso que já me fez
-						entrar em contato com um pouco de Java, HTML, CSS e
-						JavaScript.
-					</p>
-					<p>
-						Sou Engenheiro da Computação pela Universidade Federal
-						do Ceará (UFC). Durante a graduação, utilizei várias
-						linguagens de programação, como C, C++, PHP, MySQL,
-						JavaScript e Java, sendo que nesta última, fui monitor
-						durante dois semestres. Inicialmente, minha vertente
-						foco era de Telecomunicações, mas nos últimos semestres,
-						optei por mudar para Ciência da Computação.
-					</p>
-					<p>
-						Mesmo que frontend seja minha área de maior foco de
-						estudo, possuo grande interesse por backend (ainda que
-						eu não seja tão proficiente como gostaria). Compreendo
-						completamente o valor da área de design para um
-						desenvolvedor frontend, por isso procuro constantemente
-						sobre tendências de estilos visuais de projetos.
-					</p>
-					<p>
-						Hoje, as tecnologias que mais tenho domínio são Tailwind
-						CSS, TypeScript, React.JS, Next.JS e MongoDB. Fora as
-						estudar sobre minha área de atuação, nesse começo de
-						2023 comecei a estudar um pouco de japonês e criei um
-						canal no YouTube pra mostrar meu progresso. Para entrar
-						em contato, tem um formulário no fim da página, ou entre
-						em contato pelas minhas redes sociais:
-					</p>
-					<ul className={styles.social}>
-						{socialItems.map(({ href, icon, nick }) => (
+		<FullText>
+			<FadeComponent flexCol darkBG>
+				<h1>Sobre mim</h1>
+				<p>
+					Sou Engenheiro da Computação pela Universidade Federal
+					do Ceará (UFC) e durante a graduação estudei algumas
+					linguagens, tais como <strong><em>C++</em></strong>
+					, <strong><em>PHP</em></strong>
+					, <strong><em>MySQL</em></strong>
+					e <strong><em>Java</em></strong>
+					, sendo que nesta última, fui monitor durante dois
+					semestres.
+				</p>
+				<p>
+					Mesmo que <strong><em>frontend</em></strong> seja minha
+					área de maior foco de estudo, possuo grande interesse
+					por <strong><em>backend</em></strong> (mesmo que eu ainda
+					não seja tão proficiente como gostaria).
+				</p>
+				<p>
+					As tecnologias que mais tenho domínio atualmente
+					são <strong><em>Tailwind CSS</em></strong>
+					, <strong><em>TypeScript</em></strong>
+					, <strong><em>React.JS</em></strong>
+					, <strong><em>Next.JS</em></strong>
+					e <strong><em>MongoDB</em></strong>. Para entrar em
+					contato, preencha o formulário no fim da página, ou entre
+					em contato pelas minhas redes sociais:
+				</p>
+				<ul className={styles.social}>
+					{socialItems
+						.filter(({ nick }) => nick != "/@diarionihongo")
+						.map(({ href, icon, nick }) => (
 							<li key={href}>
 								<Link href={href} target="_blank">
 									{icon}
@@ -53,8 +47,8 @@ export default function AboutMe() {
 								</Link>
 							</li>
 						))}
-					</ul>
-				</FadeComponent>
-			</FullText>
+				</ul>
+			</FadeComponent>
+		</FullText>
 	)
 }

@@ -1,5 +1,5 @@
 .social {
-	@apply grid grid-cols-2 md:grid-cols-3 max-w-[95vw] w-[35rem] m-auto p-4 text-lg;
+	@apply grid grid-cols-2 max-w-[95vw] w-[35rem] m-auto p-4 text-lg;
 }
 
 .social li {
